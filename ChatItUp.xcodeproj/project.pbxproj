@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */; };
+		7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */; };
+		7D8A93FD1DDBE5A800D10CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */; };
+		7D8A93FF1DDBE5A800D10CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FE1DDBE5A800D10CC6 /* Assets.xcassets */; };
+		7D8A94021DDBE5A800D10CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A94001DDBE5A800D10CC6 /* LaunchScreen.storyboard */; };
+		7D8A940A1DDBE5EA00D10CC6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A94091DDBE5EA00D10CC6 /* Message.swift */; };
+		7D8A940C1DDBE80400D10CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A940B1DDBE80400D10CC6 /* GoogleService-Info.plist */; };
+		7DDD82AB1DDBF15D003A51B7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82AA1DDBF15D003A51B7 /* ChatViewController.swift */; };
+		7DDD82B11DDBF543003A51B7 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B01DDBF543003A51B7 /* Member.swift */; };
+		7DDD82B31DDBF574003A51B7 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B21DDBF574003A51B7 /* Chat.swift */; };
+		7DDD82B51DDBF672003A51B7 /* CreateChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */; };
+		9316CC22E8983E482F2242D6 /* Pods_ChatItUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.debug.xcconfig"; sourceTree = "<group>"; };
+		7D8A93F41DDBE5A800D10CC6 /* ChatItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7D8A93FC1DDBE5A800D10CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D8A93FE1DDBE5A800D10CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D8A94011DDBE5A800D10CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D8A94031DDBE5A800D10CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D8A94091DDBE5EA00D10CC6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7D8A940B1DDBE80400D10CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7DDD82A91DDBF09E003A51B7 /* ChatItUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatItUp.entitlements; sourceTree = "<group>"; };
+		7DDD82AA1DDBF15D003A51B7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7DDD82B01DDBF543003A51B7 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		7DDD82B21DDBF574003A51B7 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelViewController.swift; sourceTree = "<group>"; };
+		CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.release.xcconfig"; sourceTree = "<group>"; };
+		ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatItUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D8A93F11DDBE5A800D10CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9316CC22E8983E482F2242D6 /* Pods_ChatItUp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D8A93EB1DDBE5A800D10CC6 = {
+			isa = PBXGroup;
+			children = (
+				7D8A93F61DDBE5A800D10CC6 /* ChatItUp */,
+				7DDD82AF1DDBF4A5003A51B7 /* Supporting Files */,
+				7D8A93F51DDBE5A800D10CC6 /* Products */,
+				83178041B1A5A5AFAB09E198 /* Pods */,
+				CB6DDD53DAC4E27F16120159 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7D8A93F51DDBE5A800D10CC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A93F41DDBE5A800D10CC6 /* ChatItUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D8A93F61DDBE5A800D10CC6 /* ChatItUp */ = {
+			isa = PBXGroup;
+			children = (
+				7DDD82AC1DDBF468003A51B7 /* Models */,
+				7DDD82AD1DDBF46F003A51B7 /* Views */,
+				7DDD82AE1DDBF47C003A51B7 /* Controllers */,
+			);
+			path = ChatItUp;
+			sourceTree = "<group>";
+		};
+		7DDD82AC1DDBF468003A51B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A94091DDBE5EA00D10CC6 /* Message.swift */,
+				7DDD82B01DDBF543003A51B7 /* Member.swift */,
+				7DDD82B21DDBF574003A51B7 /* Chat.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7DDD82AD1DDBF46F003A51B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */,
+				7D8A94001DDBE5A800D10CC6 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7DDD82AE1DDBF47C003A51B7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */,
+				7DDD82AA1DDBF15D003A51B7 /* ChatViewController.swift */,
+				7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */,
+				7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7DDD82AF1DDBF4A5003A51B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D8A94031DDBE5A800D10CC6 /* Info.plist */,
+				7D8A940B1DDBE80400D10CC6 /* GoogleService-Info.plist */,
+				7D8A93FE1DDBE5A800D10CC6 /* Assets.xcassets */,
+				7DDD82A91DDBF09E003A51B7 /* ChatItUp.entitlements */,
+			);
+			name = "Supporting Files";
+			path = ChatItUp;
+			sourceTree = "<group>";
+		};
+		83178041B1A5A5AFAB09E198 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */,
+				CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB6DDD53DAC4E27F16120159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D8A93F31DDBE5A800D10CC6 /* ChatItUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D8A94061DDBE5A800D10CC6 /* Build configuration list for PBXNativeTarget "ChatItUp" */;
+			buildPhases = (
+				CFAB1D3DFB01AC23B72824C5 /* [CP] Check Pods Manifest.lock */,
+				7D8A93F01DDBE5A800D10CC6 /* Sources */,
+				7D8A93F11DDBE5A800D10CC6 /* Frameworks */,
+				7D8A93F21DDBE5A800D10CC6 /* Resources */,
+				37A9D2459140DD37C587C534 /* [CP] Embed Pods Frameworks */,
+				B21E43CB178CB1DB18C1CA07 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatItUp;
+			productName = ChatItUp;
+			productReference = 7D8A93F41DDBE5A800D10CC6 /* ChatItUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D8A93EC1DDBE5A800D10CC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Jim Campagno";
+				TargetAttributes = {
+					7D8A93F31DDBE5A800D10CC6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3E2QGNXM7N;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7D8A93EF1DDBE5A800D10CC6 /* Build configuration list for PBXProject "ChatItUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D8A93EB1DDBE5A800D10CC6;
+			productRefGroup = 7D8A93F51DDBE5A800D10CC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D8A93F31DDBE5A800D10CC6 /* ChatItUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D8A93F21DDBE5A800D10CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8A94021DDBE5A800D10CC6 /* LaunchScreen.storyboard in Resources */,
+				7D8A940C1DDBE80400D10CC6 /* GoogleService-Info.plist in Resources */,
+				7D8A93FF1DDBE5A800D10CC6 /* Assets.xcassets in Resources */,
+				7D8A93FD1DDBE5A800D10CC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37A9D2459140DD37C587C534 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B21E43CB178CB1DB18C1CA07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFAB1D3DFB01AC23B72824C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D8A93F01DDBE5A800D10CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D8A940A1DDBE5EA00D10CC6 /* Message.swift in Sources */,
+				7DDD82B31DDBF574003A51B7 /* Chat.swift in Sources */,
+				7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */,
+				7DDD82AB1DDBF15D003A51B7 /* ChatViewController.swift in Sources */,
+				7DDD82B51DDBF672003A51B7 /* CreateChannelViewController.swift in Sources */,
+				7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */,
+				7DDD82B11DDBF543003A51B7 /* Member.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D8A93FC1DDBE5A800D10CC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D8A94001DDBE5A800D10CC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D8A94011DDBE5A800D10CC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D8A94041DDBE5A800D10CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D8A94051DDBE5A800D10CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D8A94071DDBE5A800D10CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChatItUp/ChatItUp.entitlements;
+				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				INFOPLIST_FILE = ChatItUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimCampagno.Swift.ChatItUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7D8A94081DDBE5A800D10CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChatItUp/ChatItUp.entitlements;
+				DEVELOPMENT_TEAM = 3E2QGNXM7N;
+				INFOPLIST_FILE = ChatItUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JimCampagno.Swift.ChatItUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D8A93EF1DDBE5A800D10CC6 /* Build configuration list for PBXProject "ChatItUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D8A94041DDBE5A800D10CC6 /* Debug */,
+				7D8A94051DDBE5A800D10CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D8A94061DDBE5A800D10CC6 /* Build configuration list for PBXNativeTarget "ChatItUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D8A94071DDBE5A800D10CC6 /* Debug */,
+				7D8A94081DDBE5A800D10CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D8A93EC1DDBE5A800D10CC6 /* Project object */;
+}
