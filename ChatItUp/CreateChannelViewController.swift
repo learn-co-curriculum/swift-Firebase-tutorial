@@ -50,6 +50,7 @@ extension CreateChannelViewController {
         let chat = Chat(uniqueID: uniqueID, title: title, timestamp: timestamp, members: [member])
         
         let newChatsRef = chatRef.child(uniqueID)
+        
         let newMembersRef = membersRef.child(uniqueID)
         
         newChatsRef.setValue(chat.chatsSerialize()) { error, ref in

@@ -56,5 +56,16 @@ extension Chat {
     }
     
     
+    static func createChat(with dictionary: [String : Any]) {
+        
+//        info["title"] = title
+//        info["lastmessage"] = " "
+//        info["timestamp"] = timestamp
+        
+        let title = dictionary["title"]
+        
+    }
+    
+    
     
 }

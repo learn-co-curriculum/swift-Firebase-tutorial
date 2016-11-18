@@ -15,7 +15,40 @@ class ChatViewController: UITableViewController {
     var member: Member!
     
     var ref: FIRDatabaseReference = FIRDatabase.database().reference()
+    
+    // https://console.firebase.google.com/project/chatitup-a71a5/database/data/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     lazy var chatRef: FIRDatabaseReference = self.ref.child("chats")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     lazy var membersRef: FIRDatabaseReference = self.ref.child("members")
     lazy var messagesRef: FIRDatabaseReference = self.ref.child("messages")
     

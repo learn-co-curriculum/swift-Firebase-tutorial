@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6305741DDE121100A832AF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305731DDE121100A832AF /* AppController.swift */; };
+		5B6305761DDE14F900A832AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305751DDE14F900A832AF /* LoginViewController.swift */; };
+		5B6305781DDE164600A832AF /* StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305771DDE164600A832AF /* StoryboardID.swift */; };
 		7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */; };
 		7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */; };
 		7D8A93FD1DDBE5A800D10CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.debug.xcconfig"; sourceTree = "<group>"; };
+		5B6305731DDE121100A832AF /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		5B6305751DDE14F900A832AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5B6305771DDE164600A832AF /* StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardID.swift; sourceTree = "<group>"; };
 		7D8A93F41DDBE5A800D10CC6 /* ChatItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				7D8A94091DDBE5EA00D10CC6 /* Message.swift */,
 				7DDD82B01DDBF543003A51B7 /* Member.swift */,
 				7DDD82B21DDBF574003A51B7 /* Chat.swift */,
+				5B6305771DDE164600A832AF /* StoryboardID.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -104,6 +111,8 @@
 		7DDD82AE1DDBF47C003A51B7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B6305731DDE121100A832AF /* AppController.swift */,
+				5B6305751DDE14F900A832AF /* LoginViewController.swift */,
 				7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */,
 				7DDD82AA1DDBF15D003A51B7 /* ChatViewController.swift */,
 				7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */,
@@ -271,13 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6305761DDE14F900A832AF /* LoginViewController.swift in Sources */,
 				7D8A940A1DDBE5EA00D10CC6 /* Message.swift in Sources */,
 				7DDD82B31DDBF574003A51B7 /* Chat.swift in Sources */,
 				7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */,
+				5B6305741DDE121100A832AF /* AppController.swift in Sources */,
 				7DDD82AB1DDBF15D003A51B7 /* ChatViewController.swift in Sources */,
 				7DDD82B51DDBF672003A51B7 /* CreateChannelViewController.swift in Sources */,
 				7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */,
 				7DDD82B11DDBF543003A51B7 /* Member.swift in Sources */,
+				5B6305781DDE164600A832AF /* StoryboardID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
