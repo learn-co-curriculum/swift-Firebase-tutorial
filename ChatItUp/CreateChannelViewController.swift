@@ -43,11 +43,11 @@ extension CreateChannelViewController {
     
     func createChatRoom() {
         
-        guard let title = nameTextField.text else { return }
+        guard nameTextField.text != nil else { return }
         let uniqueID = UUID().uuidString
         let timestamp = FIRServerValue.timestamp()
         
-        let chat = Chat(uniqueID: uniqueID, title: title, timestamp: timestamp, members: [member])
+        let chat = Chat(uniqueID: uniqueID, title: nameTextField.text!, timestamp: timestamp, members: [member])
         
         let newChatsRef = chatRef.child(uniqueID)
         
