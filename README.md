@@ -1,6 +1,8 @@
 # Firebase Tutorial
 
-An iOS Messages app that covers the following:
+_Note_ - This is a work in progress. Videos + Detailed Instructions to come.
+
+### An iOS Messages app that covers the following:
 
 
 * OAuth with `Facebook` and `Google`
