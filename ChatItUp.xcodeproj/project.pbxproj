@@ -10,6 +10,7 @@
 		5B6305741DDE121100A832AF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305731DDE121100A832AF /* AppController.swift */; };
 		5B6305761DDE14F900A832AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305751DDE14F900A832AF /* LoginViewController.swift */; };
 		5B6305781DDE164600A832AF /* StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305771DDE164600A832AF /* StoryboardID.swift */; };
+		7900409F9ACC15F3AD6C74A9 /* Pods_ChatItUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29FAB451C8E9E3582AF65E5 /* Pods_ChatItUp.framework */; };
 		7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */; };
 		7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */; };
 		7D8A93FD1DDBE5A800D10CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */; };
@@ -21,11 +22,9 @@
 		7DDD82B11DDBF543003A51B7 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B01DDBF543003A51B7 /* Member.swift */; };
 		7DDD82B31DDBF574003A51B7 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B21DDBF574003A51B7 /* Chat.swift */; };
 		7DDD82B51DDBF672003A51B7 /* CreateChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */; };
-		9316CC22E8983E482F2242D6 /* Pods_ChatItUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.debug.xcconfig"; sourceTree = "<group>"; };
 		5B6305731DDE121100A832AF /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		5B6305751DDE14F900A832AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B6305771DDE164600A832AF /* StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardID.swift; sourceTree = "<group>"; };
@@ -44,8 +43,9 @@
 		7DDD82B01DDBF543003A51B7 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		7DDD82B21DDBF574003A51B7 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelViewController.swift; sourceTree = "<group>"; };
-		CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.release.xcconfig"; sourceTree = "<group>"; };
-		ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatItUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D00A2F25C088A9BCB8CD3F /* Pods-ChatItUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.release.xcconfig"; sourceTree = "<group>"; };
+		AEB6C10F6569227616F16CDF /* Pods-ChatItUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatItUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp.debug.xcconfig"; sourceTree = "<group>"; };
+		E29FAB451C8E9E3582AF65E5 /* Pods_ChatItUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatItUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,21 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9316CC22E8983E482F2242D6 /* Pods_ChatItUp.framework in Frameworks */,
+				7900409F9ACC15F3AD6C74A9 /* Pods_ChatItUp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5711F1610F50672B734FAD99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E29FAB451C8E9E3582AF65E5 /* Pods_ChatItUp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7D8A93EB1DDBE5A800D10CC6 = {
 			isa = PBXGroup;
 			children = (
 				7D8A93F61DDBE5A800D10CC6 /* ChatItUp */,
 				7DDD82AF1DDBF4A5003A51B7 /* Supporting Files */,
 				7D8A93F51DDBE5A800D10CC6 /* Products */,
-				83178041B1A5A5AFAB09E198 /* Pods */,
-				CB6DDD53DAC4E27F16120159 /* Frameworks */,
+				BBC4C0D2BC59EE2FFB1FB606 /* Pods */,
+				5711F1610F50672B734FAD99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,21 +143,13 @@
 			path = ChatItUp;
 			sourceTree = "<group>";
 		};
-		83178041B1A5A5AFAB09E198 /* Pods */ = {
+		BBC4C0D2BC59EE2FFB1FB606 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */,
-				CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */,
+				AEB6C10F6569227616F16CDF /* Pods-ChatItUp.debug.xcconfig */,
+				86D00A2F25C088A9BCB8CD3F /* Pods-ChatItUp.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		CB6DDD53DAC4E27F16120159 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ECAA60979842D0C49C7B3AD5 /* Pods_ChatItUp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D8A94061DDBE5A800D10CC6 /* Build configuration list for PBXNativeTarget "ChatItUp" */;
 			buildPhases = (
-				CFAB1D3DFB01AC23B72824C5 /* [CP] Check Pods Manifest.lock */,
+				70E69EB3FB11A8144F83ABC9 /* [CP] Check Pods Manifest.lock */,
 				7D8A93F01DDBE5A800D10CC6 /* Sources */,
 				7D8A93F11DDBE5A800D10CC6 /* Frameworks */,
 				7D8A93F21DDBE5A800D10CC6 /* Resources */,
-				37A9D2459140DD37C587C534 /* [CP] Embed Pods Frameworks */,
-				B21E43CB178CB1DB18C1CA07 /* [CP] Copy Pods Resources */,
+				A3616C711935CF6F6865077A /* [CP] Embed Pods Frameworks */,
+				0A7C7450CAFFE618C9494CED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,22 +231,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		37A9D2459140DD37C587C534 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B21E43CB178CB1DB18C1CA07 /* [CP] Copy Pods Resources */ = {
+		0A7C7450CAFFE618C9494CED /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,7 +246,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CFAB1D3DFB01AC23B72824C5 /* [CP] Check Pods Manifest.lock */ = {
+		70E69EB3FB11A8144F83ABC9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,6 +259,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3616C711935CF6F6865077A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatItUp/Pods-ChatItUp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -413,7 +413,7 @@
 		};
 		7D8A94071DDBE5A800D10CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 334BC682A5467572A80A0448 /* Pods-ChatItUp.debug.xcconfig */;
+			baseConfigurationReference = AEB6C10F6569227616F16CDF /* Pods-ChatItUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -431,7 +431,7 @@
 		};
 		7D8A94081DDBE5A800D10CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE38E7C2B6392250E776DB4F /* Pods-ChatItUp.release.xcconfig */;
+			baseConfigurationReference = 86D00A2F25C088A9BCB8CD3F /* Pods-ChatItUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

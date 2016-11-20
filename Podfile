@@ -11,8 +11,6 @@ target 'ChatItUp' do
 	pod ‘Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'GoogleSignIn'
-	pod 'FacebookCore'
-	pod 'FacebookLogin'
-	pod 'FacebookShare'
+	pod 'FacebookLogin’
 
 end

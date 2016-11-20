@@ -18,6 +18,8 @@
 
 import Foundation
 
+import FBSDKCoreKit
+
 /**
  Protocol that represents a request to the Facebook Graph API.
 
@@ -39,7 +41,7 @@ public protocol GraphRequestProtocol {
   var graphPath: String { get }
 
   /// The request parameters.
-  var parameters: [String : AnyObject]? { get }
+  var parameters: [String : Any]? { get }
 
   /// The `AccessToken` used by the request to authenticate.
   var accessToken: AccessToken? { get }
@@ -47,8 +49,8 @@ public protocol GraphRequestProtocol {
   /// The `HTTPMethod` to use for the request, e.g. `.GET`/`.POST`/`.DELETE`.
   var httpMethod: GraphRequestHTTPMethod { get }
 
-  /// Graph API Version to use, e.g. `"2.7"`.
-  var apiVersion: String { get }
+  /// Graph API Version to use. Default: `GraphAPIVersion.Default`.
+  var apiVersion: GraphAPIVersion { get }
 }
 
 extension GraphRequestProtocol {
@@ -57,7 +59,7 @@ extension GraphRequestProtocol {
 
    - parameter completion: Optional completion closure that is going to be called when the connection finishes or fails.
    */
-  public func start(completion: ((httpResponse: NSHTTPURLResponse?, result: GraphRequestResult<Self>) -> Void)? = nil) {
+  public func start(_ completion: GraphRequestConnection.Completion<Self>? = nil) {
     let connection = GraphRequestConnection()
     connection.add(self, completion: completion)
     connection.start()

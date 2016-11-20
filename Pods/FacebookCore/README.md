@@ -15,7 +15,21 @@ Swift-taylored experience to integrate your app with Facebook. Including:
 ## Getting Started
 
 - **[CocoaPods](https://cocoapods.org)**
-    - Add the following line to your Podfile:
+    - Make sure you are running the latest version of CocoaPods by running:
+      ```bash
+      gem install cocoapods
+      # (or if the above fails)
+      sudo gem install cocoapods
+      ```
+      _We support any version of CocoaPods 1.0.1 or later._
+
+    - Update your local specs repo by running:
+      ```bash
+      pod repo update
+      ```
+      _This step is optional, if you updated the specs repo recently._
+
+    - Add the following lines to your Podfile:
     
       ```ruby
       pod 'FacebookCore'
@@ -25,10 +39,17 @@ Swift-taylored experience to integrate your app with Facebook. Including:
     - Run `pod install`
     - You are all set!
 
- You may also exclude any of these dependencies, if you not need the features of those parts of the SDK.
+ You may also exclude any of these dependencies, if you do not need the features of those parts of the SDK.
   
 - **[Carthage](https://github.com/carthage/carthage)**
 
+    - Make sure you are running the latest version of Carthage by running:
+      ```bash
+      brew update
+      brew upgrade carthage
+      ```
+      _We recommend using Carthage version 0.17.2 or later._
+	  
     - Add the following line to your Cartfile:
       ```
       github "facebook/Facebook-SDK-Swift"
@@ -44,10 +65,10 @@ Swift-taylored experience to integrate your app with Facebook. Including:
             - `Bolts.framework`
         - To use Login with Facebook:
             - `FacebookLogin.framework`
-            - `FacebookCore.framework` (and it's dependencies)
+            - `FacebookCore.framework` (and its dependencies)
         - To use Share and Send Dialogs
             - `FacebookShare.framework`
-            - `FacebookCore.framework` (and it's dependencies)
+            - `FacebookCore.framework` (and its dependencies)
     - On your application targets' `Build Phases` tab:
         - Click `+` icon and choose `New Run Script Phase`.
         - Create a script with a shell of your choice (e.g. `/bin/sh`).
@@ -71,6 +92,7 @@ Swift-taylored experience to integrate your app with Facebook. Including:
   Note that you will have to manage updating this solution (as well as the dependencies on the Facebook SDK for iOS) on your own.
   
   - Clone the repository.
+  - Run the following command in the root directory of the repository: `git submodule update --init --recursive`
   - Add `FacebookSwift.xcodeproj` as a sub-project to your applications' project.
   - Add the `FacebookCore.framework`, `FacebookLogin.framework`, and `FacebookShare.framework` build products from the sub-project to your applications `Link Frameworks and Libraries` and `Embedded Binaries` sections.
   
@@ -104,7 +126,7 @@ The following types are included, with enhancements for Swift:
 
  Logging behaviors are now implemented as a type-safe set, based on Swift enums.
  
-- `Permission`s
+- `Permission`
 
  Are no longer stringly-typed (string-based), but separate types for read and write permissions (also includes a built-in permission list, which includes most common permissions by default).
 
