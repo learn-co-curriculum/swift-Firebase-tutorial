@@ -32,11 +32,12 @@ extension AppController {
             
             print("-----\(#function)-------\n")
             
+            print("Auth is: \(auth)")
+            print("user is: \(user)")
+            
             print("\n")
             print("--------------------------\n")
 
-            
-            
             let userIsLoggedIn = user != nil
             let id: StoryboardID = userIsLoggedIn ? .chatsVC : .loginVC
             self.actingVC = self.loadViewController(withID: id)

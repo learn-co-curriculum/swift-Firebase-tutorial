@@ -7,28 +7,30 @@
 //
 
 import UIKit
+import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Uncomment to automatically sign in the user.
+        // GIDSignIn.sharedInstance().signInSilently()
     }
-    @IBAction func loginTapped(_ sender: UIButton) {
-        
-        
+    
+}
+
+
+// MARK: - Google Sign In
+extension LoginViewController {
+    
+    func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
+        viewController.dismiss(animated: true, completion: nil)
     }
-
-    @IBAction func registerTapped(_ sender: UIButton) {
-        
-        
+    
+    func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
+        present(viewController, animated: true, completion: nil)
     }
-
-
-
-
+    
 }
