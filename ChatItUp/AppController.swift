@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FacebookLogin
+import FacebookCore
 
 final class AppController: UIViewController {
     
@@ -28,21 +30,37 @@ extension AppController {
     
     func loadInitialViewController() {
         
-        FIRAuth.auth()?.addStateDidChangeListener { [unowned self] auth, user in
-            
-            print("-----\(#function)-------\n")
-            
-            print("Auth is: \(auth)")
-            print("user is: \(user)")
-            
-            print("\n")
-            print("--------------------------\n")
-
-            let userIsLoggedIn = user != nil
-            let id: StoryboardID = userIsLoggedIn ? .chatsVC : .loginVC
-            self.actingVC = self.loadViewController(withID: id)
-            self.add(viewController: self.actingVC, animated: true)
-        }
+//        if let user = FIRAuth.auth()?.currentUser {
+//            // User is signed in.
+//        } else {
+//            // No user is signed in.
+//        }
+        
+//        FIRAuth.auth()?.addStateDidChangeListener { [unowned self] auth, user in
+//            var userIsLoggedIn = user != nil
+//            
+//            if !userIsLoggedIn {
+//                if AccessToken.current != nil {
+//                    userIsLoggedIn = true
+//                }
+//            
+//                
+//            }
+//            
+//            
+//            let id: StoryboardID = userIsLoggedIn ? .chatsVC : .loginVC
+//            self.actingVC = self.loadViewController(withID: id)
+//            self.add(viewController: self.actingVC, animated: true)
+        
+        
+//        }
+        
+        
+    
+        
+        let id: StoryboardID = FIRAuth.auth()?.currentUser != nil ? .chatsVC : .loginVC
+        self.actingVC = self.loadViewController(withID: id)
+        self.add(viewController: self.actingVC, animated: true)
     }
     
     func loadViewController(withID id: StoryboardID) -> UIViewController {

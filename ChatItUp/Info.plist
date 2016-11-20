@@ -34,9 +34,41 @@
 				<string>com.googleusercontent.apps.872547293563-76nneea2mcas63t8lhqm25mc26g23gac</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1777520365843005</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>https://m.facebook.com/v2.8/dialog/oauth/read</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>https://m.facebook.com/v2.8/dialog/oauth/confirm</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1777520365843005</string>
+	<key>FacebookDisplayName</key>
+	<string>Chat It Up</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -53,19 +85,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb206914776384280</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>206914776384280</string>
-    <key>FacebookDisplayName</key>
-    <string>Chat-It-Up</string>
 </dict>
 </plist>

@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FBSDKLoginKit
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         FIRApp.configure()
+
+       //  try? FIRAuth.auth()?.signOut()
         
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
@@ -49,12 +55,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
         let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
-        
-        print("\n\n")
+        print("\n")
         print("----\(#function)-----")
         print("sourceApplication = \(sourceApplication)")
         print("annotation = \(annotation)")
+        print("url: \(url)")
         print("--End of application openURL\n\n")
+        
+//        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+//            openURL:url
+//            sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//            annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+        
+     
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: annotation)
         
         return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }

@@ -61,25 +61,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JF6-HL-hcb" customClass="GIDSignInButton">
-                                <rect key="frame" x="75" y="309" width="225" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="tbe-Wk-aqN"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LuT-Eb-4Wr">
-                                <rect key="frame" x="75" y="383" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0026559780817478895" green="0.58648008108139038" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JF6-HL-hcb" firstAttribute="width" secondItem="MVS-J5-iRf" secondAttribute="width" multiplier="0.6" id="8vk-cf-CMO"/>
-                            <constraint firstItem="JF6-HL-hcb" firstAttribute="centerX" secondItem="MVS-J5-iRf" secondAttribute="centerX" id="T3T-rO-PQe"/>
                             <constraint firstItem="Zpe-Jq-Yo1" firstAttribute="centerX" secondItem="MVS-J5-iRf" secondAttribute="centerX" id="aUJ-Zl-ZeV"/>
-                            <constraint firstItem="JF6-HL-hcb" firstAttribute="centerY" secondItem="MVS-J5-iRf" secondAttribute="centerY" id="bTg-kH-Sbv"/>
                             <constraint firstItem="Zpe-Jq-Yo1" firstAttribute="top" secondItem="AHw-9E-rFc" secondAttribute="bottom" id="v5e-yC-6rF"/>
                         </constraints>
                     </view>
@@ -158,7 +143,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8P4-Th-asA" id="AUi-9q-XPY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -288,7 +273,7 @@
             <objects>
                 <navigationController storyboardIdentifier="chats-nav-controller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S9R-q3-p1V" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="c1R-2E-AJy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="c1R-2E-AJy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
