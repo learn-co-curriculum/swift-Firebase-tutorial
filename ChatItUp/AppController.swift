@@ -18,8 +18,8 @@ final class AppController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadInitialViewController()
         addNotificationObservers()
+        loadInitialViewController()
     }
     
 }
@@ -29,35 +29,6 @@ final class AppController: UIViewController {
 extension AppController {
     
     func loadInitialViewController() {
-        
-//        if let user = FIRAuth.auth()?.currentUser {
-//            // User is signed in.
-//        } else {
-//            // No user is signed in.
-//        }
-        
-//        FIRAuth.auth()?.addStateDidChangeListener { [unowned self] auth, user in
-//            var userIsLoggedIn = user != nil
-//            
-//            if !userIsLoggedIn {
-//                if AccessToken.current != nil {
-//                    userIsLoggedIn = true
-//                }
-//            
-//                
-//            }
-//            
-//            
-//            let id: StoryboardID = userIsLoggedIn ? .chatsVC : .loginVC
-//            self.actingVC = self.loadViewController(withID: id)
-//            self.add(viewController: self.actingVC, animated: true)
-        
-        
-//        }
-        
-        
-    
-        
         let id: StoryboardID = FIRAuth.auth()?.currentUser != nil ? .chatsVC : .loginVC
         self.actingVC = self.loadViewController(withID: id)
         self.add(viewController: self.actingVC, animated: true)
@@ -75,13 +46,6 @@ extension AppController {
 extension AppController {
     
     func add(viewController: UIViewController, animated: Bool = false) {
-        
-        print("======\(#function)=========\n")
-        
-        print("\n")
-        
-        print("===========================\n")
-        
         self.addChildViewController(viewController)
         containerView.addSubview(viewController.view)
         containerView.alpha = 0.0
@@ -92,11 +56,8 @@ extension AppController {
         guard animated else { containerView.alpha = 1.0; return }
         
         UIView.transition(with: containerView, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            
             self.containerView.alpha = 1.0
-            
         }) { _ in }
-        
     }
     
     func switchViewController(with notification: Notification) {
@@ -120,16 +81,12 @@ extension AppController {
         actingVC.view.alpha = 0.0
     
         UIView.animate(withDuration: 0.8, animations: {
-            
             self.actingVC.view.alpha = 1.0
             existingVC?.view.alpha = 0.0
-            
         }) { success in
-            
             existingVC?.view.removeFromSuperview()
             existingVC?.removeFromParentViewController()
             self.actingVC.didMove(toParentViewController: self)
-            
         }
         
     }
@@ -143,7 +100,6 @@ extension AppController {
     
      func addNotificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeLoginVC, object: nil)
-        
          NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeChatVC, object: nil)
     }
     
@@ -153,7 +109,6 @@ extension AppController {
 // MARK: - Notification Extension
 extension Notification.Name {
     
-   // static let closeSafariVC = Notification.Name("close-safari-view-controller")
     static let closeLoginVC = Notification.Name("close-login-view-controller")
     static let closeChatVC = Notification.Name("close-chat-view-controller")
     

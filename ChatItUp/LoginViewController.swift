@@ -16,19 +16,23 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     var googleSignInButton: UIButton!
-    var facebookSignInButton: LoginButton!
-    var testFacebookButton: FBSDKLoginButton!
-    
+    var facebookSignInButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        googleButton()
-        facebookButton()
+        createGoogleButton()
+        createFacebookButton()
     }
     
-    func googleButton() {
+}
+
+// MARK: - Creating Buttons
+extension LoginViewController {
+    
+    func createGoogleButton() {
         googleSignInButton = UIButton(type: .system)
         googleSignInButton.setBackgroundImage(#imageLiteral(resourceName: "RedGoogleButton"), for: .normal)
         googleSignInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
@@ -37,7 +41,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         view.addSubview(googleSignInButton)
         
         let constant: CGFloat = -24
-        
         googleSignInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         googleSignInButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: constant).isActive = true
         googleSignInButton.widthAnchor.constraint(equalToConstant: 193).isActive = true
@@ -46,35 +49,20 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         view.layoutIfNeeded()
     }
     
-    func facebookButton() {
+    func createFacebookButton() {
         let width = googleSignInButton.layer.frame.size.width
         let height = googleSignInButton.layer.frame.size.height
         var origin = googleSignInButton.layer.frame.origin
         origin.y += height + 10
         let frame = CGRect(x: origin.x, y: origin.y, width: width, height: height)
         
-        testFacebookButton = FBSDKLoginButton()
+        facebookSignInButton = FBSDKLoginButton()
+        facebookSignInButton.delegate = self
+        facebookSignInButton.frame = frame
         
-        testFacebookButton.delegate = self
-        
-        
-        testFacebookButton.frame = frame
-        
-        
-        view.addSubview(testFacebookButton)
-        
+        view.addSubview(facebookSignInButton)
         view.layoutIfNeeded()
-        
-        
-        
     }
-    
-    
-    
-    func signIn(sender: UIButton) {
-        GIDSignIn.sharedInstance().signIn()
-    }
-    
 }
 
 
@@ -88,9 +76,11 @@ extension LoginViewController {
     }
     
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
-        
-        
         present(viewController, animated: true, completion: nil)
+    }
+    
+    func signIn() {
+        GIDSignIn.sharedInstance().signIn()
     }
     
 }
@@ -100,76 +90,25 @@ extension LoginViewController {
 extension LoginViewController: FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        
         DispatchQueue.main.async {
             
-        
-        
-        if result.isCancelled { return }
-        
-        print("-----------------------\(#function)------------------\n")
-        print("Button: \(loginButton)")
-        print("\n")
-        print("Result: \(result)")
-        print("\n")
-        print("Error: \(error)")
-        
-        if let result = result {
+            guard result != nil, !result.isCancelled, error == nil else { /* TODO */  return }
             
+            guard let accessToken = FBSDKAccessToken.current()?.tokenString else { /* TODO */ return }
             
-            
-            
-            
-            
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            let accessToken = FBSDKAccessToken.current()
-            
-            print("Access token: \(accessToken)")
-            
-            
-            
-            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken!.tokenString)
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken)
             
             FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-                
                 DispatchQueue.main.async {
-                    
-                
-                
-                NotificationCenter.default.post(name: .closeLoginVC, object: nil)
-                
+                    NotificationCenter.default.post(name: .closeLoginVC, object: nil)
                 }
-                
             }
-            
-        } else {
-            
-            print("Bad")
-            
-        }
-        
-        
-        print("----------------------------------------------------------\n")
-
         }
     }
     
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-        
-        
+        // TODO
     }
-    
-    
-    
-    
-    
-    
-    
     
 }
