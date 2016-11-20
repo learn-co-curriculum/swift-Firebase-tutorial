@@ -11,8 +11,8 @@
 		5B6305761DDE14F900A832AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305751DDE14F900A832AF /* LoginViewController.swift */; };
 		5B6305781DDE164600A832AF /* StoryboardID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6305771DDE164600A832AF /* StoryboardID.swift */; };
 		7900409F9ACC15F3AD6C74A9 /* Pods_ChatItUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29FAB451C8E9E3582AF65E5 /* Pods_ChatItUp.framework */; };
+		7D0FFDD51DE219EA0078C418 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0FFDD41DE219EA0078C418 /* LoginManager.swift */; };
 		7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */; };
-		7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */; };
 		7D8A93FD1DDBE5A800D10CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FB1DDBE5A800D10CC6 /* Main.storyboard */; };
 		7D8A93FF1DDBE5A800D10CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A93FE1DDBE5A800D10CC6 /* Assets.xcassets */; };
 		7D8A94021DDBE5A800D10CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8A94001DDBE5A800D10CC6 /* LaunchScreen.storyboard */; };
@@ -29,9 +29,9 @@
 		5B6305751DDE14F900A832AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5B6305771DDE164600A832AF /* StoryboardID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardID.swift; sourceTree = "<group>"; };
 		7D02BB541DE111DD00774269 /* ChatItUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatItUp-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D0FFDD41DE219EA0078C418 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		7D8A93F41DDBE5A800D10CC6 /* ChatItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D8A93FC1DDBE5A800D10CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D8A93FE1DDBE5A800D10CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D8A94011DDBE5A800D10CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +100,7 @@
 		7DDD82AC1DDBF468003A51B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D0FFDD41DE219EA0078C418 /* LoginManager.swift */,
 				7D8A94091DDBE5EA00D10CC6 /* Message.swift */,
 				7DDD82B01DDBF543003A51B7 /* Member.swift */,
 				7DDD82B21DDBF574003A51B7 /* Chat.swift */,
@@ -123,7 +124,6 @@
 			children = (
 				5B6305731DDE121100A832AF /* AppController.swift */,
 				5B6305751DDE14F900A832AF /* LoginViewController.swift */,
-				7D8A93F91DDBE5A800D10CC6 /* ViewController.swift */,
 				7DDD82AA1DDBF15D003A51B7 /* ChatViewController.swift */,
 				7DDD82B41DDBF672003A51B7 /* CreateChannelViewController.swift */,
 				7D8A93F71DDBE5A800D10CC6 /* AppDelegate.swift */,
@@ -286,10 +286,10 @@
 				5B6305761DDE14F900A832AF /* LoginViewController.swift in Sources */,
 				7D8A940A1DDBE5EA00D10CC6 /* Message.swift in Sources */,
 				7DDD82B31DDBF574003A51B7 /* Chat.swift in Sources */,
-				7D8A93FA1DDBE5A800D10CC6 /* ViewController.swift in Sources */,
 				5B6305741DDE121100A832AF /* AppController.swift in Sources */,
 				7DDD82AB1DDBF15D003A51B7 /* ChatViewController.swift in Sources */,
 				7DDD82B51DDBF672003A51B7 /* CreateChannelViewController.swift in Sources */,
+				7D0FFDD51DE219EA0078C418 /* LoginManager.swift in Sources */,
 				7D8A93F81DDBE5A800D10CC6 /* AppDelegate.swift in Sources */,
 				7DDD82B11DDBF543003A51B7 /* Member.swift in Sources */,
 				5B6305781DDE164600A832AF /* StoryboardID.swift in Sources */,

@@ -16,16 +16,16 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var loginManager = LoginManager()
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
         FIRApp.configure()
-
-       //  try? FIRAuth.auth()?.signOut()
+        
+        //  try? FIRAuth.auth()?.signOut()
         
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().delegate = loginManager
         
         return true
     }
@@ -55,48 +55,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
         let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
-        print("\n")
-        print("----\(#function)-----")
-        print("sourceApplication = \(sourceApplication)")
-        print("annotation = \(annotation)")
-        print("url: \(url)")
-        print("--End of application openURL\n\n")
         
-//        BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
-//            openURL:url
-//            sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-//            annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+        let urlString = url.absoluteString
         
-     
-        
-        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: annotation)
-        
-        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
-    }
-    
-    
-}
-
-// MARK: - Google Sign In
-extension AppDelegate: GIDSignInDelegate {
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print(error.localizedDescription)
-            return
+        if urlString.contains("fb1777520365843005") {
+            return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: annotation)
         }
         
-        let authentication = user.authentication
-        let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
-                                                          accessToken: (authentication?.accessToken)!)
-        
-        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-            // TODO
+        if urlString.contains("com.googleusercontent") {
+            return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         }
+        
+        return true
     }
     
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // TODO
-    }
     
 }

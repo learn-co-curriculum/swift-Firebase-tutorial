@@ -25,6 +25,17 @@ final class AppController: UIViewController {
 }
 
 
+// MARK: - Notficiation Observers
+extension AppController {
+    
+    func addNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeLoginVC, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeChatVC, object: nil)
+    }
+    
+}
+
+
 // MARK: - Loading VC's
 extension AppController {
     
@@ -79,7 +90,7 @@ extension AppController {
         addChildViewController(actingVC)
         add(viewController: actingVC)
         actingVC.view.alpha = 0.0
-    
+        
         UIView.animate(withDuration: 0.8, animations: {
             self.actingVC.view.alpha = 1.0
             existingVC?.view.alpha = 0.0
@@ -91,17 +102,6 @@ extension AppController {
         
     }
     
-    
-}
-
-
-// MARK: - Notficiation Observers
-extension AppController {
-    
-     func addNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeLoginVC, object: nil)
-         NotificationCenter.default.addObserver(self, selector: #selector(switchViewController(with:)), name: .closeChatVC, object: nil)
-    }
     
 }
 
@@ -124,6 +124,6 @@ extension UIView {
         rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
+    
 }
 

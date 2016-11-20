@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWA-ld-gMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-722" y="-215"/>
+            <point key="canvasLocation" x="137" y="-188"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YSO-Db-YBw">
@@ -71,64 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oug-XX-de9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110" y="-581"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChatItUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Xi-Id-tTz">
-                                <rect key="frame" x="111" y="152" width="154" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEh-sW-7Qs">
-                                <rect key="frame" x="111" y="229" width="154" height="42"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="CHAT">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="enterChat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7eE-sb-seJ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firebase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fP1-cc-zKs">
-                                <rect key="frame" x="115" y="20" width="145" height="48"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="vEh-sW-7Qs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iok-9p-gts"/>
-                            <constraint firstItem="vEh-sW-7Qs" firstAttribute="width" secondItem="0Xi-Id-tTz" secondAttribute="width" id="MZF-4Y-YEE"/>
-                            <constraint firstItem="fP1-cc-zKs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Mvd-ko-JKj"/>
-                            <constraint firstItem="0Xi-Id-tTz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="R5v-Q9-JES"/>
-                            <constraint firstItem="fP1-cc-zKs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ucu-QX-cTI"/>
-                            <constraint firstItem="vEh-sW-7Qs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.75" id="oua-X1-QIP"/>
-                            <constraint firstItem="0Xi-Id-tTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sqT-vk-wr0"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="chatButton" destination="vEh-sW-7Qs" id="A5p-bL-9sg"/>
-                        <outlet property="nameTextField" destination="0Xi-Id-tTz" id="ZBJ-8v-nhp"/>
-                        <segue destination="S9R-q3-p1V" kind="presentation" identifier="ChatSegue" modalTransitionStyle="crossDissolve" id="jiT-me-SqO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="111" y="125"/>
+            <point key="canvasLocation" x="1054" y="-627"/>
         </scene>
         <!--Chat Rooms-->
         <scene sceneID="ZA4-Ke-8n9">
@@ -143,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8P4-Th-asA" id="AUi-9q-XPY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

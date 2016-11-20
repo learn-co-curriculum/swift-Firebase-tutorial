@@ -8,12 +8,10 @@
 
 import UIKit
 import Firebase
-import FacebookLogin
-import FacebookCore
 import FBSDKLoginKit
 
 
-class LoginViewController: UIViewController, GIDSignInUIDelegate {
+class LoginViewController: UIViewController {
     
     var googleSignInButton: UIButton!
     var facebookSignInButton: FBSDKLoginButton!
@@ -57,7 +55,9 @@ extension LoginViewController {
         let frame = CGRect(x: origin.x, y: origin.y, width: width, height: height)
         
         facebookSignInButton = FBSDKLoginButton()
-        facebookSignInButton.delegate = self
+        
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        facebookSignInButton.delegate = appdelegate.loginManager
         facebookSignInButton.frame = frame
         
         view.addSubview(facebookSignInButton)
@@ -66,12 +66,11 @@ extension LoginViewController {
 }
 
 
-// MARK: - Google Sign In
-extension LoginViewController {
+// MARK: - Google UI Delegate
+extension LoginViewController: GIDSignInUIDelegate {
     
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
         viewController.dismiss(animated: false, completion: { _ in
-            NotificationCenter.default.post(name: .closeLoginVC, object: nil)
         })
     }
     
@@ -86,29 +85,3 @@ extension LoginViewController {
 }
 
 
-// MARK: - Facebook Log In
-extension LoginViewController: FBSDKLoginButtonDelegate {
-    
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        DispatchQueue.main.async {
-            
-            guard result != nil, !result.isCancelled, error == nil else { /* TODO */  return }
-            
-            guard let accessToken = FBSDKAccessToken.current()?.tokenString else { /* TODO */ return }
-            
-            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken)
-            
-            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-                DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: .closeLoginVC, object: nil)
-                }
-            }
-        }
-    }
-    
-    
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        // TODO
-    }
-    
-}
