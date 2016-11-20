@@ -14,7 +14,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
-        
         // Uncomment to automatically sign in the user.
         // GIDSignIn.sharedInstance().signInSilently()
     }
@@ -26,7 +25,9 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 extension LoginViewController {
     
     func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
-        viewController.dismiss(animated: true, completion: nil)
+        viewController.dismiss(animated: false, completion: { _ in
+            NotificationCenter.default.post(name: .closeLoginVC, object: nil)
+        })
     }
     
     func sign(_ signIn: GIDSignIn!, present viewController: UIViewController!) {
