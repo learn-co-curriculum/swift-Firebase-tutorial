@@ -87,7 +87,6 @@ extension AppController {
         let existingVC = actingVC
         existingVC?.willMove(toParentViewController: nil)
         actingVC = loadViewController(withID: id)
-        addChildViewController(actingVC)
         add(viewController: actingVC)
         actingVC.view.alpha = 0.0
         
